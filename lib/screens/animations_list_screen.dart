@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'implicit_screens/animated_container_with_curves_screen.dart';
 import 'implicit_screens/animated_opacity_screen.dart';
+import 'implicit_screens/rotate_transition_screen.dart';
+import 'implicit_screens/scale_transition_screen.dart';
 import 'implicit_screens/tween_animation_builder_screen.dart';
 
 class AnimationsListScreen extends StatelessWidget {
@@ -24,10 +26,24 @@ class AnimationsListScreen extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => AnimatedContainerWithCurvesScreen()));
               },
             ),
-            ListTile(title: Text('Implicit -> TweenAnimationBuilder'),
+            ListTile(
+              title: Text('Implicit -> TweenAnimationBuilder'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => TweenAnimationBuilderScreen()));
-              },),
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> RotateTransition'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => RotateTransitionScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> SizeTransition'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => ScaleTransitionScreen()));
+              },
+            ),
           ],
         ),
       ),
