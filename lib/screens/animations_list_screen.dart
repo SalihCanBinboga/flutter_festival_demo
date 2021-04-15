@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_festival_animations/screens/explicit_screens/tween_sequence_demo_screen.dart';
 
+import 'explicit_screens/animated_builder_demo_screen.dart';
+import 'explicit_screens/without_animated_widget_screen.dart';
+import 'explicit_screens/animated_widget_demo_screen.dart';
+import 'explicit_screens/rotate_transition_screen.dart';
 import 'implicit_screens/animated_container_with_curves_screen.dart';
 import 'implicit_screens/animated_opacity_screen.dart';
-import 'implicit_screens/rotate_transition_screen.dart';
-import 'implicit_screens/scale_transition_screen.dart';
+import 'explicit_screens/scale_transition_screen.dart';
 import 'implicit_screens/tween_animation_builder_screen.dart';
 
 class AnimationsListScreen extends StatelessWidget {
@@ -42,6 +46,30 @@ class AnimationsListScreen extends StatelessWidget {
               title: Text('Explicit -> SizeTransition'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => ScaleTransitionScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> AnimatedWidget'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => AnimatedWidgetDemoScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> without AnimatedWidget'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => WithoutAnimatedWidgetScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> AnimatedBuilder'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => AnimatedBuilderDemoScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> TweenSequence'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => TweenSequenceDemoScreen()));
               },
             ),
           ],
