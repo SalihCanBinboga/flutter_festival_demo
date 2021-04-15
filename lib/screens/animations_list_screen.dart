@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_festival_animations/screens/explicit_screens/tween_sequence_demo_screen.dart';
 
 import 'explicit_screens/animated_builder_demo_screen.dart';
+import 'explicit_screens/tween_sequence_interval_demo_screen.dart';
 import 'explicit_screens/without_animated_widget_screen.dart';
 import 'explicit_screens/animated_widget_demo_screen.dart';
 import 'explicit_screens/rotate_transition_screen.dart';
@@ -70,6 +71,12 @@ class AnimationsListScreen extends StatelessWidget {
               title: Text('Explicit -> TweenSequence'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => TweenSequenceDemoScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> Tween Staggered Interval'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => TweenSequenceIntervalDemoScreen()));
               },
             ),
           ],
