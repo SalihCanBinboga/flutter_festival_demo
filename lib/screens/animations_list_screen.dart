@@ -50,15 +50,15 @@ class AnimationsListScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Explicit -> AnimatedWidget'),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (ctx) => AnimatedWidgetDemoScreen()));
-              },
-            ),
-            ListTile(
               title: Text('Explicit -> without AnimatedWidget'),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (ctx) => WithoutAnimatedWidgetScreen()));
+              },
+            ),
+            ListTile(
+              title: Text('Explicit -> AnimatedWidget'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (ctx) => AnimatedWidgetDemoScreen()));
               },
             ),
             ListTile(
